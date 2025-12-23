@@ -1,0 +1,33 @@
+{
+  "name": "lance-rural",
+  "version": "1.0.0",
+  "description": "Configurações do novo tema do site do Lance Rural",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.clean.js && webpack --config webpack.build.js --mode=production",
+    "build:general": "npx sass ./assets/scss/general.scss ./dist/css/general.css --no-source-map && npx postcss ./dist/css/general.css -o ./dist/css/general.css --config postcss.config.js --verbose",
+    "build:header": "npx sass ./assets/scss/components/header.scss ./dist/css/header.css --no-source-map && npx postcss ./dist/css/header.css -o ./dist/css/header.css --config postcss.config.js --verbose",
+    "build:home": "npx sass ./assets/scss/home.scss ./dist/css/home.css --no-source-map && npx postcss ./dist/css/home.css -o ./dist/css/home.css --config postcss.config.js --verbose",
+    "build:noticias": "npx sass ./assets/scss/noticias.scss ./dist/css/noticias.css --no-source-map && npx postcss ./dist/css/noticias.css -o ./dist/css/noticias.css --config postcss.config.js --verbose",
+    "build:agenda": "npx sass ./assets/scss/agenda.scss ./dist/css/agenda.css --no-source-map && npx postcss ./dist/css/agenda.css -o ./dist/css/agenda.css --config postcss.config.js --verbose",
+    "build:all_css": "npm run build:home && npm run build:noticias && npm run build:agenda",
+    "watch:home": "npx sass --watch ./assets/scss/home.scss:./dist/css/home.css --no-source-map",
+    "watch:noticias": "npx sass --watch ./assets/scss/noticias.scss:./dist/css/noticias.css --no-source-map",
+    "watch:agenda": "npx sass --watch ./assets/scss/agenda.scss:./dist/css/agenda.css --no-source-map",
+    "watch:all": "concurrently \"npx sass --watch ./assets/scss:./dist/css --no-source-map\" \"npx postcss ./dist/css/*.css -d ./dist/css --config postcss.config.js --watch\""
+  },
+  "author": "João Dias",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "clean-webpack-plugin": "^4.0.0",
+    "concurrently": "^9.2.1",
+    "cssnano": "^7.1.1",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1",
+    "sass": "^1.92.1",
+    "webpack": "^5.101.3",
+    "webpack-cli": "^6.0.1"
+  }
+}

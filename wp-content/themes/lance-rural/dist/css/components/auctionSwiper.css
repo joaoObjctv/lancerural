@@ -1,0 +1,260 @@
+#swiperLive {
+  background-color: #161616;
+  margin-bottom: 50px;
+  padding: 24px 0;
+}
+#swiperLive .swiper-wrapper {
+  height: auto !important;
+}
+#swiperLive .swiper-pagination {
+  bottom: 10px !important;
+}
+#swiperLive .swiper-pagination-bullet {
+  background-color: #aaa !important;
+  opacity: 1 !important;
+}
+#swiperLive .swiper-pagination-bullet-active {
+  background-color: #8CC640 !important;
+}
+
+.auctionSwiper {
+  align-items: flex-start;
+  background-color: rgba(242, 242, 242, 0.0509803922);
+  border-left: solid 8px #8CC63F;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 16px 16px 16px 40px;
+  width: 100%;
+}
+@media (max-width: 1024px) {
+  .auctionSwiper {
+    gap: 20px;
+    max-width: 95%;
+    padding: 16px;
+  }
+}
+@media (max-width: 600px) {
+  .auctionSwiper {
+    flex-direction: column;
+  }
+}
+.auctionSwiper__txt {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+}
+.auctionSwiper__txt .date-time {
+  display: flex;
+  margin-bottom: 16px;
+}
+.auctionSwiper__txt .date-time p.now {
+  align-items: center;
+  justify-content: center;
+  background-color: #8CC63F;
+  border-radius: 24px;
+  color: #fff;
+  display: flex;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: 0;
+  padding: 7px 24px;
+  text-transform: uppercase;
+}
+@media (max-width: 1024px) {
+  .auctionSwiper__txt .date-time p.now {
+    font-size: 14px;
+    padding: 5px 14px;
+  }
+}
+.auctionSwiper__txt .date-time p.now img {
+  border-radius: 0;
+  display: block;
+  height: 26px;
+  margin-right: 8px;
+  width: 26px;
+}
+@media (max-width: 1024px) {
+  .auctionSwiper__txt .date-time p.now img {
+    height: 16px;
+    width: 16px;
+  }
+}
+.auctionSwiper__txt .date-time h5 {
+  align-items: center;
+  color: #6DA621;
+  display: flex;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+@media (max-width: 1024px) {
+  .auctionSwiper__txt .date-time h5 {
+    font-size: 16px;
+  }
+}
+.auctionSwiper__txt .date-time h5 span {
+  font-family: inherit;
+  align-items: center;
+  border-left: solid 6px #8CC63F;
+  display: flex;
+  margin-left: 6px;
+  padding-left: 8px;
+}
+@media (max-width: 1024px) {
+  .auctionSwiper__txt .date-time h5 span {
+    border-width: 4px;
+  }
+}
+.auctionSwiper__txt .date-time h5 img {
+  align-items: center;
+  display: inline-block;
+  height: 18px;
+  object-fit: contain;
+  object-position: center;
+  margin-right: 4px;
+  width: 18px;
+}
+.auctionSwiper__txt .auction-locale {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+@media (max-width: 1024px) {
+  .auctionSwiper__txt .auction-locale {
+    margin-bottom: 25px;
+  }
+}
+.auctionSwiper__txt .auction-locale h2 {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.5;
+  letter-spacing: 0;
+  margin-bottom: 8px;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+@media (max-width: 1024px) {
+  .auctionSwiper__txt .auction-locale h2 {
+    font-size: 20px;
+  }
+}
+.auctionSwiper__txt .auction-locale h2 a {
+  color: #fff;
+  text-decoration: none;
+}
+.auctionSwiper__txt .auction-locale p {
+  color: #E8E8E8;
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0;
+  margin-bottom: 8px;
+  vertical-align: bottom;
+}
+.auctionSwiper__txt .auction-locale p:last-child {
+  margin-bottom: 0;
+}
+.auctionSwiper__txt .auction-locale p strong {
+  color: #6DA621;
+  font-family: inherit;
+  font-weight: 700;
+  margin-left: 8px;
+  text-transform: uppercase;
+}
+.auctionSwiper__txt .btn {
+  background-color: #fff;
+  border-radius: 8px;
+  color: #6DA621;
+  font-size: 14px;
+  padding: 12px 80px;
+}
+@media (max-width: 600px) {
+  .auctionSwiper__txt .btn {
+    width: 100%;
+  }
+}
+.auctionSwiper__txt .btn span {
+  background-color: #6DA621;
+  right: -8px;
+}
+.auctionSwiper__txt .btn span::before, .auctionSwiper__txt .btn span::after {
+  background-color: #6DA621;
+}
+.auctionSwiper__txt .btn:hover span {
+  right: -12px;
+}
+.auctionSwiper .live {
+  background-color: #FF4948;
+  border-radius: 4px;
+  color: #fff;
+  display: inline-block;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0;
+  padding: 8px 24px;
+  text-align: center;
+}
+@media (max-width: 1024px) {
+  .auctionSwiper .live {
+    display: none;
+  }
+}
+.auctionSwiper .live--mb {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .auctionSwiper .live--mb {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 10px;
+    padding: 4px 14px;
+  }
+}
+.auctionSwiper .show {
+  display: none;
+}
+@media (min-width: 768px) {
+  .auctionSwiper .show--desk {
+    align-items: flex-start;
+    display: grid;
+    gap: 40px;
+    grid-template-columns: auto 1fr;
+  }
+}
+@media (max-width: 992px) {
+  .auctionSwiper .show--desk {
+    gap: 0;
+  }
+}
+@media (max-width: 600px) {
+  .auctionSwiper .show--mb {
+    display: block;
+  }
+}
+.auctionSwiper .show img {
+  border-radius: 16px;
+  height: 240px;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+@media (max-width: 600px) {
+  .auctionSwiper .show img {
+    margin-bottom: 20px;
+  }
+}

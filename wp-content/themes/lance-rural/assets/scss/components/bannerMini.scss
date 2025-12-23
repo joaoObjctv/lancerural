@@ -1,0 +1,100 @@
+.bannerTop {
+    background: linear-gradient(90deg, #8BC53F -0.06%, #00ADEE 99.95%);
+    position: relative;
+    overflow: hidden;
+
+    &::before, &::after {
+        content: '';
+        background-image: url('../../../assets/img/fundo-topo-banner.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 495px; 
+    }
+
+    &::after {
+        background-image: url('../../../assets/img/fundo-topo-banner-direita.png');
+        left: initial;
+        right: 0;
+        top: 0;
+        width: 230px;
+    }
+
+    @media(max-width: 992px) {
+        padding: 10px 0;
+    }
+
+    >.d-flex {
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        
+        @media(max-width: 600px) {
+            gap: 10px;
+            flex-direction: column;
+        }
+
+        >img {
+            @media(max-width: 992px) {
+                display: none;
+            }
+        }
+    }
+
+    h1 {
+        color: #fff;
+        font-family: "Roboto Serif", sans-serif;
+        font-weight: 600;
+        font-style: SemiBold;
+        font-size: 20px;
+        line-height: 1.5;
+        letter-spacing: 0px;
+        text-shadow: 1px 1px #00000040;
+        max-width: 540px;
+        width: 100%;
+
+        @media(max-width: 600px) {
+            font-size: 16px;
+        }   
+    }
+
+    a {
+        border-radius: 8px;
+        display: block;
+        position: relative;
+
+        img {
+            display: block;
+            max-width: 100%;
+            width: 100%;
+        }
+
+        &::before {
+            content: '';
+            left: 0;
+            height: 100%;
+            position: absolute;
+            transition: all .3s ease-in-out;
+            top: 0;
+            width: 100%;
+        }
+        &:hover {
+            &::before {
+                background-color: rgba(#222, .2);
+            }
+        }
+
+        &:last-child {
+            &:hover {
+                &::before {
+                    background-color: rgba(#fff, .3);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,221 @@
+header {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  left: 0;
+  max-width: 100%;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+@media (max-width: 1279px) {
+  header {
+    background-color: #fff;
+    box-shadow: 0px 2px 2px -1px #CCCCCC;
+    height: 70px;
+    padding: 0 20px;
+    z-index: 999;
+  }
+}
+@media (max-width: 600px) {
+  header {
+    top: 0;
+  }
+}
+header .flex-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+}
+header .logo img {
+  height: 45px;
+}
+header .wrapMenu {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  transition: all 0.3s ease-in-out;
+}
+header .wrapMenu.active {
+  left: 0;
+}
+@media (max-width: 1279px) {
+  header .wrapMenu {
+    background-color: #fff;
+    flex-direction: column-reverse;
+    justify-content: center;
+    height: calc(100vh - 70px);
+    left: -5000px;
+    padding: 30px 20px 0;
+    position: absolute;
+    top: 70px;
+    width: 100%;
+  }
+}
+header .wrapMenu nav {
+  height: 100%;
+  width: 100%;
+}
+header .wrapMenu .menu-navegue {
+  align-items: center;
+  display: flex;
+  height: 70px;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0 auto;
+  max-width: 680px;
+  padding: 0;
+  width: 100%;
+}
+@media (max-width: 1279px) {
+  header .wrapMenu .menu-navegue {
+    align-items: normal;
+    flex-direction: column;
+    height: auto;
+    max-width: 100%;
+  }
+}
+@media (max-width: 1279px) {
+  header .wrapMenu .menu-navegue li {
+    border-bottom: solid 1px #ccc;
+    text-align: center;
+  }
+}
+header .wrapMenu .menu-navegue li a {
+  color: #212320;
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+header .wrapMenu .menu-navegue li a:hover {
+  color: #005e8a;
+}
+header .wrapMenu .menu-navegue li.current-menu-item a {
+  color: #005e8a;
+}
+header .wrapMenu form {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 0 0 0 40px;
+  padding: 0;
+}
+@media (max-width: 1279px) {
+  header .wrapMenu form {
+    margin: 0 auto;
+    max-width: 680px;
+    width: 100%;
+  }
+}
+@media (max-width: 992px) {
+  header .wrapMenu form {
+    max-width: 100%;
+  }
+}
+header .wrapMenu form label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+header .wrapMenu form input {
+  background-color: #f2f2f2;
+  border: 0;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  color: #ccc;
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  font-size: 14px;
+  height: 40px;
+  outline: none;
+  padding: 10px 16px;
+  -webkit-appearance: none;
+}
+header .wrapMenu form input::placeholder {
+  color: #ccc;
+}
+@media (max-width: 1279px) {
+  header .wrapMenu form input {
+    width: 100%;
+  }
+}
+header .wrapMenu form button {
+  background-color: #f2f2f2;
+  border: 0;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  height: 40px;
+  padding: 10px 16px;
+  transition: all ease-in-out 0.3s;
+  -webkit-appearance: none;
+}
+header .wrapMenu form button:hover {
+  background-color: #ddd;
+}
+header .wrapMenu form button img {
+  display: block;
+  height: 18px;
+  width: 18px;
+}
+header .mobMenu {
+  display: none;
+  align-items: center;
+  height: 30px;
+}
+@media (max-width: 1279px) {
+  header .mobMenu {
+    display: flex;
+  }
+}
+header .mobMenu span {
+  background-color: #4D4F4D;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  width: 25px;
+}
+header .mobMenu span::after, header .mobMenu span::before {
+  content: "";
+  background-color: #4D4F4D;
+  position: absolute;
+  height: 2px;
+  width: 25px;
+  top: -8px;
+  left: 0;
+  transition: all 0.3s ease-in-out;
+}
+header .mobMenu span::after {
+  top: 8px;
+}
+header .mobMenu.active span {
+  height: 0;
+}
+header .mobMenu.active span::after, header .mobMenu.active span::before {
+  top: 0;
+}
+header .mobMenu.active span::after {
+  transform: rotate(-45deg);
+}
+header .mobMenu.active span::before {
+  transform: rotate(45deg);
+}
+
+.logged-in header {
+  top: 32px;
+}
+@media (max-width: 600px) {
+  .logged-in header {
+    top: 0;
+  }
+}

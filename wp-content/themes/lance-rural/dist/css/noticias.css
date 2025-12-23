@@ -1,0 +1,1 @@
+.title{margin-top:30px}.newsAuction{align-items:center;display:grid;gap:20px;grid-template-columns:1fr 1fr 1fr 1fr;max-width:1200px;padding:0 0 100px}@media (max-width:1279px){.newsAuction{grid-template-columns:1fr 1fr 1fr}}@media (max-width:992px){.newsAuction{grid-template-columns:1fr 1fr}}@media (max-width:600px){.newsAuction{grid-template-columns:1fr}}

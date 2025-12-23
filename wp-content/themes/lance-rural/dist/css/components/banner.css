@@ -1,0 +1,110 @@
+.bannerApp {
+  background: linear-gradient(270deg, #8BC53F 0.05%, #00ADEE 100.06%);
+  position: relative;
+  height: 400px;
+}
+.bannerApp::before, .bannerApp::after {
+  content: "";
+  background-image: url("../../../assets/img/detalhe-rodape-esq-banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top right;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 766px;
+  z-index: 1;
+}
+@media (max-width: 992px) {
+  .bannerApp::before, .bannerApp::after {
+    background-size: contain;
+    width: 50%;
+  }
+}
+.bannerApp::after {
+  background-image: url("../../../assets/img/detalhe-topo-dir-banner-bottom.png");
+  bottom: 0;
+  height: 293px;
+  left: initial;
+  right: 0;
+  top: initial;
+  width: 404px;
+}
+@media (max-width: 992px) {
+  .bannerApp::after {
+    height: 200px;
+    width: 260px;
+  }
+}
+.bannerApp--top {
+  background: linear-gradient(90deg, #8BC53F -0.06%, #00ADEE 99.95%);
+  margin-bottom: 40px;
+}
+.bannerApp .container {
+  position: relative;
+  z-index: 3;
+}
+.bannerApp .container .d-grid {
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  height: 100%;
+}
+@media (max-width: 992px) {
+  .bannerApp .container .d-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.bannerApp .container .d-grid > img {
+  align-self: flex-end;
+  display: block;
+  height: 382px;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+  width: 100%;
+}
+@media (max-width: 992px) {
+  .bannerApp .container .d-grid > img {
+    display: none;
+  }
+}
+.bannerApp__txt {
+  display: flex;
+  flex-direction: column;
+  max-width: 460px;
+  width: 100%;
+}
+.bannerApp__txt h2 {
+  color: #fff;
+  font-family: "Roboto Serif", sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1.2;
+  letter-spacing: 0px;
+  margin-bottom: 16px;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.2509803922);
+}
+.bannerApp__txt p {
+  color: #fff;
+  font-family: "Roboto Serif", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 0px;
+  margin-bottom: 16px;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.2509803922);
+}
+.bannerApp__txt .d-flex {
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 992px) {
+  .bannerApp__txt .d-flex {
+    justify-content: flex-start;
+  }
+}
+.bannerApp__txt .d-flex a img {
+  max-width: 100%;
+  width: 100%;
+}

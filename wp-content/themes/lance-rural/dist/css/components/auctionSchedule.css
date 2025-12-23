@@ -1,0 +1,173 @@
+.scheduleAuction {
+  margin-bottom: 40px;
+}
+.scheduleAuction .d-flex {
+  margin-bottom: 40px;
+}
+@media (max-width: 992px) {
+  .scheduleAuction .d-flex {
+    flex-direction: column;
+  }
+}
+
+.cardLeilao {
+  border: solid 1px #8CC63F;
+  border-radius: 16px;
+  max-width: 458px;
+  padding: 8px 8px 16px;
+  width: 100%;
+}
+@media (max-width: 992px) {
+  .cardLeilao {
+    max-width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .cardLeilao {
+    min-height: 370px;
+  }
+}
+.cardLeilao img {
+  border-radius: 8px;
+  max-width: 100%;
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+@media (max-width: 992px) {
+  .cardLeilao img {
+    height: auto;
+  }
+}
+.cardLeilao__info {
+  margin-top: 16px;
+}
+@media (max-width: 600px) {
+  .cardLeilao__info {
+    display: flex;
+    flex-direction: column;
+    min-height: 140px;
+  }
+}
+.cardLeilao__info p {
+  color: #6DA621;
+  display: inline-block;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+@media (max-width: 600px) {
+  .cardLeilao__info p {
+    font-size: 12px;
+  }
+}
+.cardLeilao__info p img {
+  height: 14px;
+  width: 14px;
+}
+.cardLeilao__info p span {
+  border-left: solid 2px #E8E8E8;
+  border-right: solid 2px #E8E8E8;
+  color: #7A7B79;
+  font-family: inherit;
+  margin: 0 8px;
+  padding: 0 8px;
+}
+.cardLeilao__info p strong {
+  font-family: inherit;
+}
+.cardLeilao__info h2 {
+  color: #3E3E3E;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 45px;
+  text-transform: uppercase;
+}
+@media (max-width: 600px) {
+  .cardLeilao__info h2 {
+    font-size: 16px;
+  }
+}
+.cardLeilao__info .btn {
+  font-size: 14px;
+  margin-left: auto;
+  max-width: initial;
+  padding: 8px 24px;
+  width: max-content;
+}
+@media (max-width: 600px) {
+  .cardLeilao__info .btn {
+    margin-top: auto;
+  }
+}
+.cardLeilao__info .btn span {
+  margin: 0 0 0 8px;
+  position: relative;
+  left: 0;
+}
+.cardLeilao__info .btn:hover span {
+  left: 12px;
+}
+.cardLeilao--line {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  max-width: 100%;
+  padding: 8px;
+}
+@media (max-width: 600px) {
+  .cardLeilao--line {
+    align-items: flex-start;
+    display: grid;
+  }
+}
+.cardLeilao--line .cardLeilao__info {
+  justify-content: space-between;
+  margin-top: 0;
+  width: 100%;
+}
+.cardLeilao--line .cardLeilao__info .btn {
+  font-size: 14px;
+}
+.cardLeilao--line img {
+  object-fit: cover;
+  object-position: center;
+  height: 130px;
+  max-width: initial;
+  width: 175px;
+}
+@media (max-width: 600px) {
+  .cardLeilao--line img {
+    height: auto;
+    width: 100%;
+  }
+}
+.cardLeilao--line h2 {
+  margin-bottom: 30px;
+}
+@media (max-width: 600px) {
+  .cardLeilao--line h2 {
+    margin-bottom: 15px;
+  }
+}
+
+#swiperSchedule {
+  padding-bottom: 20px;
+}
+#swiperSchedule .swiper-wrapper {
+  height: auto !important;
+  margin-bottom: 20px;
+}
+#swiperSchedule .swiper-slide {
+  height: auto !important;
+}
+
+.swiperSchedule-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
