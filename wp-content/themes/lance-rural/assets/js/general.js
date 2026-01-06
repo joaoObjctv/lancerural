@@ -7,16 +7,6 @@ jQuery(document).ready(function($){
         $('.actShowMenu, .wrapMenu').toggleClass('active');
     });
 
-    function parseDMYHisToDate(str) {
-        // espera "26-09-2025 18:15:00"
-        const [datePart, timePart] = str.split(' ');        // ["26-09-2025", "18:15:00"]
-        const [day, month, year] = datePart.split('-').map(Number);
-        const [hours, minutes, seconds] = timePart.split(':').map(Number);
-
-        // mês no JS começa do zero → janeiro = 0
-        return new Date(year, month - 1, day, hours, minutes, seconds || 0);
-    }
-
     $('#load-more').on('click', function() {
         let button = $(this);
         let page = parseInt(button.attr('data-page')) + 1;

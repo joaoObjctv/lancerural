@@ -115,6 +115,12 @@
             padding: 8px 20px;
             text-align: center;
             text-transform: uppercase;
+
+            &.ativo {
+                background-color: #6da621;
+                border-color: #6da621;
+                color: #fff;
+            }
         }
     }
 

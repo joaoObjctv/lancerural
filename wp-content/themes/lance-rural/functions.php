@@ -1,5 +1,15 @@
 <?php
+
+function time_zone_function(){
+  date_default_timezone_set('UTC');
+}
+add_action('wp_loaded', 'time_zone_function');
+
 require_once get_template_directory() . '/includes/enqueue.php';
+require_once get_template_directory() . '/includes/functions/load-custom-posts-types.php';
+require_once get_template_directory() . '/includes/functions/load-leiloes-ordered-auctions.php';
+require_once get_template_directory() . '/includes/functions/load-link-image-rest-api-leiloes.php';
+require_once get_template_directory() . '/includes/functions/load-options-pages.php';
 
 
 function theme_setup() {
@@ -316,10 +326,13 @@ function get_leiloes_by_date() {
             get_template_part( 'components/content', 'card-leilao-line', $leilao );
         }
     } else {
-        echo '<p class="no-results">Nenhum leilão para esta data.</p>';
+        echo '<h2 class="no-results">Nenhum leilão para esta data '. date('d/m/Y', strtotime($filter_date)) . '.</h2>';
+        echo '<p>Fique abaixo com os leilões seguintes.</p><br />';
+        
+        $listLeiloes =  get_leiloes();
+        foreach ($listLeiloes["leiloes"] as $leilao) {
+            get_template_part( 'components/content', 'list-leiloes', $leilao );
+        }
     }
-
-    // $html = ob_get_clean();
-    // wp_send_json_success($html);
     wp_die();
 }
